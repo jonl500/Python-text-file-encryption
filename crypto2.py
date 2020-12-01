@@ -7,11 +7,9 @@ import os
 from Crypto.Random import get_random_bytes
 from Crypto.Cipher import AES
 
-actual_password = "csc332Crypto<3" #this is the string form of the passw$
 password = input('enter password: ')
 password2 = password.encode()
-#b is to know that its bits
-#pads the password with extra bits
+
 salt = b'qQqbHctmkCEdh_RFhvIy5Qg5yPSDeEFpNnyThdGgM3c='
 
 #all in one method
@@ -24,12 +22,13 @@ iterations = 100000,
 backend=default_backend()
 )
 
+#encode password
 key = base64.urlsafe_b64encode(kdf.derive(password2))
 
 with open('hashtest1.txt','rb') as file:
     hashed_password = file.read()
-print(hashed_password)
 
+#pattern matching
 if key == hashed_password:
     print("Success!")
     plain_text = input("plain text here:")
