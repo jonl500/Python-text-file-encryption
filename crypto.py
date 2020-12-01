@@ -7,7 +7,7 @@ import os
 
 actual_password = "csc332Crypto<3" #this is the string form of the password
 password = actual_password.encode() #converts to bytes
-
+password2 = input('enter password')
 #b is to know that its bits
 #pads the password with extra bits
 salt = b'qQqbHctmkCEdh_RFhvIy5Qg5yPSDeEFpNnyThdGgM3c='
@@ -23,6 +23,7 @@ backend=default_backend()
 )
 
 key = base64.urlsafe_b64encode(kdf.derive(password)) #only uses kdf once
+key2 = base64.urlsafe_b64encode(kdf.derive(password2))
 #print(key)
 file = open('hashtest1.txt', 'wb')
 file.write(key)
@@ -32,7 +33,7 @@ with open('hashtest1.txt','r') as file:
     hashed_password = file.read()
 print(hashed_password)
 
-if hashed_password == open('hashtest1.txt').read():
+if key2 == open('hashtest1.txt').read():
     print("Success!")
 else :
     print("Fail :(")
