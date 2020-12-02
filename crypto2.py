@@ -43,7 +43,7 @@ def encrypt(plain_text,password):
         'tag': base64.b64encode(tag).decode('utf-8')
         }
     file = open('encrypted_text.txt', 'wb')
-    file.write(cipher_text)
+    file.write(cipher_text.encode('utf-8'))
     file.close()
 
 def decrypt(enc_dict, password):
@@ -66,13 +66,13 @@ def decrypt(enc_dict, password):
 
     return decrypted
 
-def main():
+#def main():
     #pattern matching
-    if private_key == hashed_password:
-        print("Success!")
-        plain_text = input("plain text here:")
-        encrypt(plain_text, hashed_password)
-    else :
-       print('Fail :(')
+if private_key == hashed_password:
+    print("Success!")
+    plain_text = input("plain text here:")
+    encrypt(plain_text, hashed_password)
+else :
+    print('Fail :(')
 
-main()
+#main()
