@@ -13,7 +13,7 @@ password = input('enter password: ')
 
 salt = b'qQqbHctmkCEdh_RFhvIy5Qg5yPSDeEFpNnyThdGgM3c='
 
-#all in one method
+# all in one method
 
 # kdf = PBKDF2HMAC(
 # algorithm = hashes.SHA256(),
@@ -21,18 +21,18 @@ salt = b'qQqbHctmkCEdh_RFhvIy5Qg5yPSDeEFpNnyThdGgM3c='
 # salt = salt,
 # iterations = 100000,
 # backend=default_backend()
-#)
+# )
 
-#encode password
-#key = base64.urlsafe_b64encode(kdf.derive(password2))
+# encode password
+# key = base64.urlsafe_b64encode(kdf.derive(password2))
 private_key = hashlib.scrypt(
-        password.encode(), salt=salt, n=2**14, r=8, p=1, dklen=32)
+    password.encode(), salt=salt, n=2 ** 14, r=8, p=1, dklen=32)
 
-with open('hashtest1.txt','rb') as file:
+with open('hashtest1.txt', 'rb') as file:
     hashed_password = file.read()
 
 
-def encrypt(plain_text,password):
+def encrypt(plain_text, password):
     cipher_config = AES.new(private_key, AES.MODE_GCM)
 
     # return a dictionary with the encrypted text
@@ -42,10 +42,8 @@ def encrypt(plain_text,password):
         'salt': base64.b64encode(salt).decode('utf-8'),
         'nonce': base64.b64encode(cipher_config.nonce).decode('utf-8'),
         'tag': base64.b64encode(tag).decode('utf-8')
-        }
-    file = open('encrypted.txt', 'w')
-    file.write(cipher_text)
-    file.close()
+    }
+
 
 def decrypt(enc_dict, password):
     # decode the dictionary entries from base64
@@ -54,10 +52,9 @@ def decrypt(enc_dict, password):
     nonce = b64decode(enc_dict['nonce'])
     tag = b64decode(enc_dict['tag'])
 
-
     # generate the private key from the password and salt
     private_key = hashlib.scrypt(
-        password.encode(), salt=salt, n=2**14, r=8, p=1, dklen=32)
+        password.encode(), salt=salt, n=2 ** 14, r=8, p=1, dklen=32)
 
     # create the cipher config
     cipher = AES.new(private_key, AES.MODE_GCM, nonce=nonce)
@@ -67,16 +64,20 @@ def decrypt(enc_dict, password):
 
     return decrypted
 
-    #pattern matching
+    # pattern matching
+
+
 if private_key == hashed_password:
     print("Success!")
     x = input("encrypt or decrypt? ")
 
-    if  x == "encrypt":
+    if x == "e":
         plain_text = input("plain text here:")
-        encrypt(plain_text, hashed_password)
-    elif x == "decrypt":
-        print("decription")    
-else :
+        cipherTxt = encrypt(plain_text, hashed_password)
+        file = open('encrypted_text.txt', 'w')
+        file.write(str(cipherTxt))
+        file.close()
+    elif x == "d":
+        print("decription")
+else:
     print('Fail :(')
-
