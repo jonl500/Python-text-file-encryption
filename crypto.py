@@ -29,11 +29,11 @@ file = open('hashtest1.txt', 'wb')
 file.write(private_key)
 file.close()
 
-with open('hashtest1.txt','r') as file:
-    hashed_password = file.read()
-print(hashed_password)
-
-if hashed_password == open('hashtest1.txt').read():
-    print("Success!")
-else :
-    print("Fail :(")
+# with open('hashtest1.txt','r') as file:
+#     hashed_password = file.read()
+# print(hashed_password)
+#
+# if hashed_password == open('hashtest1.txt').read():
+#     print("Success!")
+# else :
+#     print("Fail :(")
