@@ -31,7 +31,7 @@ with open('hashtest1.txt','rb') as file:
     hashed_password = file.read()
 
 
-def encrypt(plain_text):
+def encrypt(plain_text,password):
     cipher_config = AES.new(private_key, AES.MODE_GCM)
 
     # return a dictionary with the encrypted text
@@ -46,12 +46,33 @@ def encrypt(plain_text):
     file.write(cipher_text)
     file.close()
 
+def decrypt(enc_dict, password):
+    # decode the dictionary entries from base64
+    salt = b64decode(enc_dict['salt'])
+    cipher_text = b64decode(enc_dict['cipher_text'])
+    nonce = b64decode(enc_dict['nonce'])
+    tag = b64decode(enc_dict['tag'])
 
-#pattern matching
-if private_key == hashed_password:
-    print("Success!")
-    plain_text = input("plain text here:")
-    encrypt(plain_text)
-else :
-   print('Fail :(')
 
+    # generate the private key from the password and salt
+    private_key = hashlib.scrypt(
+        password.encode(), salt=salt, n=2**14, r=8, p=1, dklen=32)
+
+    # create the cipher config
+    cipher = AES.new(private_key, AES.MODE_GCM, nonce=nonce)
+
+    # decrypt the cipher text
+    decrypted = cipher.decrypt_and_verify(cipher_text, tag)
+
+    return decrypted
+
+def main():
+    #pattern matching
+    if private_key == hashed_password:
+        print("Success!")
+        plain_text = input("plain text here:")
+        encrypt(plain_text, hashed_password)
+    else :
+       print('Fail :(')
+
+main()
