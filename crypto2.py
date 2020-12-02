@@ -66,13 +66,11 @@ def decrypt(enc_dict, password):
 
     return decrypted
 
-def main():
     #pattern matching
-    if private_key == hashed_password:
-        print("Success!")
-        plain_text = input("plain text here:")
-        encrypt(plain_text, hashed_password)
-    else :
-       print('Fail :(')
+if private_key == hashed_password:
+    print("Success!")
+    plain_text = input("plain text here:")
+    encrypt(plain_text, hashed_password)
+else :
+    print('Fail :(')
 
-main()
