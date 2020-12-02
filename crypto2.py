@@ -5,6 +5,7 @@ from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 import os
+import csv
 from Crypto.Random import get_random_bytes
 from Crypto.Cipher import AES
 
@@ -42,7 +43,7 @@ def encrypt(plain_text,password):
         'nonce': base64.b64encode(cipher_config.nonce).decode('utf-8'),
         'tag': base64.b64encode(tag).decode('utf-8')
         }
-    file = open('encrypted_text.txt', 'wb')
+    file = open('encrypted.txt', 'w')
     file.write(cipher_text)
     file.close()
 
@@ -69,8 +70,13 @@ def decrypt(enc_dict, password):
     #pattern matching
 if private_key == hashed_password:
     print("Success!")
-    plain_text = input("plain text here:")
-    encrypt(plain_text, hashed_password)
+    x = input("encrypt or decrypt? ")
+
+    if  x == "encrypt":
+        plain_text = input("plain text here:")
+        encrypt(plain_text, hashed_password)
+    elif x == "decrypt":
+        print("decription")    
 else :
     print('Fail :(')
 
