@@ -74,9 +74,10 @@ if private_key == hashed_password:
     if x == "e":
         plain_text = input("plain text here:")
         cipherTxt = encrypt(plain_text, hashed_password)
-        file = open('encrypted_text.txt', 'w')
-        file.write(str(cipherTxt))
-        file.close()
+        with open('encrypted_text.csv', 'w') as file:                                                                                
+             writer = csv.writer(file)                                                                                               
+             writer.writerow(cipherTxt.values())
+        file.close() 
     elif x == "d":
         print("decription")
 else:
