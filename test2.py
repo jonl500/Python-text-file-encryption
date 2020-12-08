@@ -1,4 +1,7 @@
+import os
 import json
+from os import listdir
+from os.path import isfile, join
 from base64 import b64encode
 from base64 import b64decode
 from Crypto.Cipher import AES
@@ -34,11 +37,19 @@ def decrypt():
             key = f.read()
         cipher = AES.new(key, AES.MODE_CBC, iv)
         pt = unpad(cipher.decrypt(ct), AES.block_size)
-        print("The message was: ", pt)
+        print("The message was: ", pt.decode('utf-8'))
     except ValueError as KeyError:
         print("Incorrect decryption")
 
-data = input("data here: ")
+file_name = input('Input a text file: ')
+dir = input('Type in a directory: ')
 
-encrypt(data)
-decrypt()
+if(os.path.exists(dir)):
+   with open(file_name, 'r') as f:
+        text = f.read()
+        encrypt(text)
+        os.remove(file_name)
+        decrypt()
+   f.close()
+else:
+   print('The directory does not exist, please try again.')
