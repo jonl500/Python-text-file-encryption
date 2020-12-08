@@ -20,13 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7b302c70-2876-437b-a387-cc7a27fde22b" name="Default Changelist" comment="update for encrypt">
+      <change afterPath="$PROJECT_DIR$/test2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/encrypted_text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/encrypted_text.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -44,7 +51,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Python.crypto2">
+  <component name="RunManager" selected="Python.test2">
     <configuration name="crypto" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ProgrammingProjectCrypto" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -89,8 +96,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ProgrammingProjectCrypto" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test2" />
         <item itemvalue="Python.crypto2" />
         <item itemvalue="Python.crypto" />
       </list>
@@ -105,7 +135,9 @@
       <option name="presentableId" value="Default" />
       <updated>1606876925059</updated>
       <workItem from="1606876927931" duration="5496000" />
-      <workItem from="1607206286416" duration="16964000" />
+      <workItem from="1607206286416" duration="18052000" />
+      <workItem from="1607294382356" duration="604000" />
+      <workItem from="1607381629573" duration="6481000" />
     </task>
     <task id="LOCAL-00001" summary="update for encrypt">
       <created>1606877433545</created>
@@ -141,38 +173,38 @@
       <screen x="0" y="0" width="1280" height="679" />
     </state>
     <state x="296" y="142" width="684" height="408" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.679@0.0.1280.679" timestamp="1606881587257" />
-    <state width="1234" height="190" key="GridCell.Tab.0.bottom" timestamp="1607224616972">
+    <state width="1234" height="172" key="GridCell.Tab.0.bottom" timestamp="1607387297184">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
-    <state width="1234" height="190" key="GridCell.Tab.0.bottom/0.0.1280.679@0.0.1280.679" timestamp="1607224616972" />
-    <state width="1234" height="190" key="GridCell.Tab.0.center" timestamp="1607224616971">
+    <state width="1234" height="172" key="GridCell.Tab.0.bottom/0.0.1280.679@0.0.1280.679" timestamp="1607387297184" />
+    <state width="1234" height="172" key="GridCell.Tab.0.center" timestamp="1607387297183">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
-    <state width="1234" height="190" key="GridCell.Tab.0.center/0.0.1280.679@0.0.1280.679" timestamp="1607224616971" />
-    <state width="1234" height="190" key="GridCell.Tab.0.left" timestamp="1607224616971">
+    <state width="1234" height="172" key="GridCell.Tab.0.center/0.0.1280.679@0.0.1280.679" timestamp="1607387297183" />
+    <state width="1234" height="172" key="GridCell.Tab.0.left" timestamp="1607387297183">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
-    <state width="1234" height="190" key="GridCell.Tab.0.left/0.0.1280.679@0.0.1280.679" timestamp="1607224616971" />
-    <state width="1234" height="190" key="GridCell.Tab.0.right" timestamp="1607224616972">
+    <state width="1234" height="172" key="GridCell.Tab.0.left/0.0.1280.679@0.0.1280.679" timestamp="1607387297183" />
+    <state width="1234" height="172" key="GridCell.Tab.0.right" timestamp="1607387297183">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
-    <state width="1234" height="190" key="GridCell.Tab.0.right/0.0.1280.679@0.0.1280.679" timestamp="1607224616972" />
-    <state width="1234" height="190" key="GridCell.Tab.1.bottom" timestamp="1607224609703">
+    <state width="1234" height="172" key="GridCell.Tab.0.right/0.0.1280.679@0.0.1280.679" timestamp="1607387297183" />
+    <state width="1234" height="190" key="GridCell.Tab.1.bottom" timestamp="1607279584135">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
-    <state width="1234" height="190" key="GridCell.Tab.1.bottom/0.0.1280.679@0.0.1280.679" timestamp="1607224609703" />
-    <state width="1234" height="190" key="GridCell.Tab.1.center" timestamp="1607224609703">
+    <state width="1234" height="190" key="GridCell.Tab.1.bottom/0.0.1280.679@0.0.1280.679" timestamp="1607279584135" />
+    <state width="1234" height="190" key="GridCell.Tab.1.center" timestamp="1607279584135">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
-    <state width="1234" height="190" key="GridCell.Tab.1.center/0.0.1280.679@0.0.1280.679" timestamp="1607224609703" />
-    <state width="1234" height="190" key="GridCell.Tab.1.left" timestamp="1607224609703">
+    <state width="1234" height="190" key="GridCell.Tab.1.center/0.0.1280.679@0.0.1280.679" timestamp="1607279584135" />
+    <state width="1234" height="190" key="GridCell.Tab.1.left" timestamp="1607279584134">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
-    <state width="1234" height="190" key="GridCell.Tab.1.left/0.0.1280.679@0.0.1280.679" timestamp="1607224609703" />
-    <state width="1234" height="190" key="GridCell.Tab.1.right" timestamp="1607224609703">
+    <state width="1234" height="190" key="GridCell.Tab.1.left/0.0.1280.679@0.0.1280.679" timestamp="1607279584134" />
+    <state width="1234" height="190" key="GridCell.Tab.1.right" timestamp="1607279584135">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
-    <state width="1234" height="190" key="GridCell.Tab.1.right/0.0.1280.679@0.0.1280.679" timestamp="1607224609703" />
+    <state width="1234" height="190" key="GridCell.Tab.1.right/0.0.1280.679@0.0.1280.679" timestamp="1607279584135" />
     <state x="238" y="71" width="800" height="540" key="Vcs.Push.Dialog.v2" timestamp="1606877479709">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
@@ -197,6 +229,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/crypto2_py$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1607387297159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/crypto2_py$crypto2.coverage" NAME="crypto2 Coverage Results" MODIFIED="1607224593923" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ProgrammingProjectCrypto$crypto.coverage" NAME="crypto Coverage Results" MODIFIED="1606879811596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ProgrammingProjectCrypto$crypto2.coverage" NAME="crypto2 Coverage Results" MODIFIED="1606882054060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
