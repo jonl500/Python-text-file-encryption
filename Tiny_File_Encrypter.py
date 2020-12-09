@@ -72,35 +72,35 @@ def decrypt(fileName, privKey):
     except ValueError as KeyError:
         print("Incorrect decryption")
 
-password = input("Please input password to access encryption program: ")
-
-if (passCheck(password) == True):
-
-    command = input("choose encrypt or decrypt: ")
-    if (command == "encrypt"):
-
-        file_name = input('Input a text file: ')
-
-        prKey = input("Give a name to your key file: ")
-
-        with open(file_name, 'r') as f:
-            text = f.read()
-            encrypt(file_name, prKey)
-
-        f.close()
-
-
-    elif(command == "decrypt"):
-        file_name = input('Input a json file: ')
-        #dir = input('Type in a directory: ')
-        keyName = input("type keyfile name here: ")
-        #keydir = input('Type in a directory for your key: ')
-        #if os.path.exists(dir) & os.path.exists(keydir):
-        with open(file_name, 'r') as f:
-                text = f.read()
-                decrypt(file_name,keyName)
-        f.close()
-        # else:
-        #    print('The directory does not exist, please try again.')
-else:
-    print("Password incorrect!")
+# password = input("Please input password to access encryption program: ")
+#
+# if (passCheck(password) == True):
+#
+#     command = input("choose encrypt or decrypt: ")
+#     if (command == "encrypt"):
+#
+#         file_name = input('Input a text file: ')
+#
+#         prKey = input("Give a name to your key file: ")
+#
+#         with open(file_name, 'r') as f:
+#             text = f.read()
+#             encrypt(file_name, prKey)
+#
+#         f.close()
+#
+#
+#     elif(command == "decrypt"):
+#         file_name = input('Input a json file: ')
+#         #dir = input('Type in a directory: ')
+#         keyName = input("type keyfile name here: ")
+#         #keydir = input('Type in a directory for your key: ')
+#         #if os.path.exists(dir) & os.path.exists(keydir):
+#         with open(file_name, 'r') as f:
+#                 text = f.read()
+#                 decrypt(file_name,keyName)
+#         f.close()
+#         # else:
+#         #    print('The directory does not exist, please try again.')
+# else:
+#     print("Password incorrect!")
