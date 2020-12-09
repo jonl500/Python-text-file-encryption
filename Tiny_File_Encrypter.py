@@ -23,10 +23,13 @@ def passCheck(user_input):
     else:
         print('Password is incorrect')
         return False
-def encrypt(fileName, data, privKey):
+def encrypt(fileName, privKey):
     base = os.path.basename(fileName)
     name = os.path.splitext(base)[0]
-    data = bytes(data, 'utf-8')
+    with open(fileName, 'r') as f:
+        text = f.read()
+    f.close()
+    data = bytes(text, 'utf-8')
     key = get_random_bytes(16)
     with open(privKey + '.txt', 'wb') as f:
         f.write(key)
@@ -69,35 +72,35 @@ def decrypt(fileName, privKey):
     except ValueError as KeyError:
         print("Incorrect decryption")
 
-# password = input("Please input password to access encryption program: ")
-#
-# if (passCheck(password) == True):
-#
-#     command = input("choose encrypt or decrypt: ")
-#     if (command == "encrypt"):
-#
-#         file_name = input('Input a text file: ')
-#
-#         prKey = input("Give a name to your key file: ")
-#
-#         with open(file_name, 'r') as f:
-#             text = f.read()
-#             encrypt(file_name ,text, prKey)
-#
-#         f.close()
-#
-#
-#     elif(command == "decrypt"):
-#         file_name = input('Input a json file: ')
-#         #dir = input('Type in a directory: ')
-#         keyName = input("type keyfile name here: ")
-#         #keydir = input('Type in a directory for your key: ')
-#         #if os.path.exists(dir) & os.path.exists(keydir):
-#         with open(file_name, 'r') as f:
-#                 text = f.read()
-#                 decrypt(file_name,keyName)
-#         f.close()
-#         # else:
-#         #    print('The directory does not exist, please try again.')
-# else:
-#     print("Password incorrect!")
+password = input("Please input password to access encryption program: ")
+
+if (passCheck(password) == True):
+
+    command = input("choose encrypt or decrypt: ")
+    if (command == "encrypt"):
+
+        file_name = input('Input a text file: ')
+
+        prKey = input("Give a name to your key file: ")
+
+        with open(file_name, 'r') as f:
+            text = f.read()
+            encrypt(file_name, prKey)
+
+        f.close()
+
+
+    elif(command == "decrypt"):
+        file_name = input('Input a json file: ')
+        #dir = input('Type in a directory: ')
+        keyName = input("type keyfile name here: ")
+        #keydir = input('Type in a directory for your key: ')
+        #if os.path.exists(dir) & os.path.exists(keydir):
+        with open(file_name, 'r') as f:
+                text = f.read()
+                decrypt(file_name,keyName)
+        f.close()
+        # else:
+        #    print('The directory does not exist, please try again.')
+else:
+    print("Password incorrect!")
